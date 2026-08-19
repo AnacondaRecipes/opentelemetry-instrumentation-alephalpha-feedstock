@@ -1,13 +1,13 @@
 {% set name = "opentelemetry-instrumentation-alephalpha" %}
-{% set version = "0.57.0" %}
+{% set version = "0.62.1" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_')}}-{{ version }}.tar.gz
-  sha256: 6c3100179a5fdce223ff723e603729601890cf3bd3220ffb6da498dbf3108c9a
+  sha256: b0a71effe8c3f5ee7a656531c9e7ca44ce5db60c5d034a5d0cfba2419b6af0b5
 
 build:
   number: 0
@@ -23,8 +23,8 @@ requirements:
     - python
     - opentelemetry-api >=1.38.0,<2.0.0
     - opentelemetry-instrumentation >=0.59b0
-    - opentelemetry-semantic-conventions >=0.59b0
     - opentelemetry-semantic-conventions-ai >=0.5.1,<0.6.0
+    - opentelemetry-semantic-conventions >=0.63b1
 
 # Tests disabled, No module named 'aleph_alpha_client' -> https://pypi.org/project/aleph-alpha-client/
 test:
